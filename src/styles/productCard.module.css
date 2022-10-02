@@ -1,0 +1,114 @@
+.productCard{
+    width: 260px;
+    height: 330px;
+    box-shadow: 0 0 5px #cdcdcd;
+    border-radius: 40px;
+    margin: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.imageBox img{
+    width: 100%;
+    height: 210px;
+}
+
+.productTitle{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #3f3f3f;
+}
+
+.productDetail a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #274546;
+    padding: 5px 10px;
+    border-radius: 0 0 5px 5px;
+    background-color: #f1f1f1;
+    font-weight: 700;
+    position: absolute;
+    transform: rotate(-90deg);
+    bottom: 76px;
+    left: -12px;
+}   
+
+.productPrice{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #3b5781;
+    position: absolute;
+    bottom: 56px;
+    right: 10px;
+}
+
+.cardBtns{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid; */
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    z-index: 99;
+}
+
+.showQuantity{
+    width: 80px;
+    height: 35px;
+    background-color: #3b5781;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #f1f1f1;
+    font-weight: 700;
+    font-size: 1.1rem;
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 40px);
+}
+
+.addToCartBtn{
+    padding: 8px 30px;
+    background-color: #3b5781;
+    border-radius: 30px;
+    margin: 0 auto;
+    border: none;
+    font-family: YekanBakh;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.addToCartBtn:hover{
+    background-color: #3b5781db;
+}
+
+.other{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.otherBtns{
+    background-color: transparent;
+    border: none;
+    color: #274546;    
+    padding: 5px 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}   
+
+@media (max-width: 576px) {
+    .productCard{
+        margin: 15px 0;
+    }
+}

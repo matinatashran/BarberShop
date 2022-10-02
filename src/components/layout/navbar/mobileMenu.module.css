@@ -1,0 +1,100 @@
+.mobileMenuBar{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-weight: 600;
+    color: #0F3D3E;
+    margin: 30px 0;
+}
+
+.mobileMenuBar i{
+    padding: 0 10px;
+    margin-top: -18px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.crossIcon{
+    position: sticky;
+    top: 10px;
+    text-align: left;
+    font-size: 1.2rem;
+    color: #0F3D3E;
+    cursor: pointer;
+}
+
+.crossIcon i{
+    background-color: #E2DCC8;
+    padding: 10px 10px 10px 0;
+}
+
+.mobileMenuBar a{
+    text-decoration: none;
+    color: #0F3D3E; 
+    font-size: 0.9rem;
+}
+
+.mobileMenuBar li{
+    margin: 10px 0;
+}
+
+/* lines */
+.mobileMenuBar > li:nth-child(1), 
+.mobileMenuBar > li:nth-child(4){
+    border-bottom: 1px solid #0f3d3eab;
+    padding-bottom: 10px;
+}
+
+.mobileSubMenu{
+    list-style: none;
+    font-size: 0.85rem !important;
+    transition: 0.4s;
+}
+
+.mobileSubMenu span{
+    padding: 0 10px;
+}
+
+.mobileSubMenu li:nth-child(odd){
+    background-color: #cbc6b6;
+    padding: 5px 0;
+    border-radius: 5px;
+}
+
+.menuBtn{
+    width: 100%;
+    text-align: center;
+    margin: 40px 0 40px 0;
+}
+
+.turnRatingsBtn{
+    text-decoration: none;
+    color: #E2DCC8;
+    font-weight: 700;
+    background-color: #0F3D3E;
+    border-radius: 8px;
+    padding: 7px 15px;
+    transition: 0.3s;
+}
+
+.turnRatingsBtn:active{
+    transform: scale(0.98);
+}
+
+.extras{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #0F3D3E;
+    border-radius: 30px;
+    padding: 5px 0;
+}
+
+.extras div{
+    font-size: 1.4rem;
+    color: #0F3D3E;
+    cursor: pointer;
+    margin: 5px 30px 0 30px;
+}
+

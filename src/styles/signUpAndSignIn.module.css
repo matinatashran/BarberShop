@@ -1,0 +1,242 @@
+.signUpContainer{
+    margin-top: 60px;
+    min-height: 600px;
+}
+
+.innerContainer{
+    width: 800px;
+    min-height: 600px;
+    box-shadow: 0 0 5px #d5dae1;
+    margin: 70px auto 30px auto;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pagesMenu{
+    width: 61%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagesMenu span{
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #3b5781;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.right{
+    width: 100%;
+    height: 100%;
+}
+
+.right h4{
+    position: relative;
+    background-color: #f1f1f1;
+    color: #3b5781;
+    width: 100px;
+    padding: 7px 0;
+    text-align: center;
+    border-radius: 0 0 0 20px;
+    font-weight: 800;
+}
+
+.signUpForm{
+    width: 65%;
+    padding: 0 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;    
+}
+
+.left{
+    width: 35%;
+    height: 100%;
+    background-color: #becce0;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.innerLeft{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    text-align: center;
+    left: 13px;
+    top: calc(50% - 150px);
+}
+
+.innerLeft h2{
+    font-family: Righteous;
+    color: #3b5781;
+}
+
+.innerLeft span,
+.innerLeft p{
+    font-weight: 700;
+    color: #0000008c;
+}
+
+/* it's for login form */
+.subText{
+    font-size: 0.85rem;
+    color: #0000006b !important;
+    font-weight: 500 !important;
+}
+
+.innerLeft a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #f1f1f1;
+    background-color: #3b5781;
+    padding: 5px 20px;
+    border-radius: 8px;
+}
+
+.submitBtn{
+    width: 95%;
+    margin-top: 100px;
+    padding: 11px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: YekanBakh;
+    border-radius: 30px;
+    background-color: #3b5781;
+    color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submitBtn:hover{
+    background-color: #3b5781d9;
+}
+
+@media (max-width: 1024px) {
+    .innerContainer{
+        width: 650px;
+    }
+    
+    .innerLeft{
+        width: 85%;
+    }
+
+    .innerLeft h2{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .innerContainer{
+        width: 90%;
+    }
+    
+    .innerLeft{
+        width: 85%;
+    }
+
+    .innerLeft h2{
+        font-size: 1.1rem;
+    }
+
+    .innerLeft span{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .innerContainer{
+        width: 90%;
+    }
+
+    .right h4{
+        width: 120px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        transform: rotate(-90deg);
+        padding: 7px 40px 7px 0px;
+        border-radius: 10px 0 0 0;
+        top: 80px;
+        right: -41px;
+    }
+
+    .pagesMenu{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 5.5em;
+    }    
+
+    .signUpForm{
+        width: 80%;
+        margin: 100px auto 20px auto; 
+    }
+
+    .left{
+        width: 100%;
+        height: 120px;
+        border-radius: 0 0 100% 100%;
+    }
+    
+    .innerLeft{
+        width: 85%;
+        height: 100px;
+        margin: 0 auto;
+        position: relative;
+        top: 10px;
+        left: 0;
+    }
+
+    .innerLeft h2{
+        font-size: 1.1rem;
+    }
+
+    .innerLeft span,
+    .innerLeft p{
+        font-size: 0.9rem;
+    }
+
+    .subText{
+        font-size: 0.75rem !important;
+    }
+
+    .innerLeft a{
+        font-size: 0.8rem;
+        padding: 3px 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .signUpForm{
+        width: 100%;
+    }
+
+    .innerLeft h2{
+        font-size: 1rem;
+    }
+
+    .innerLeft span{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .right h4{
+        padding: 4px 40px 4px 0px;
+        right: -44px;
+    }
+}

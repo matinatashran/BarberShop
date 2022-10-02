@@ -1,0 +1,222 @@
+.navbarContainer{
+    width: 100%;
+    height: 55px;
+    background-color: #F1F1F1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+/* mobile device - START */
+
+.burgerMenuIcon{    
+    font-size: 1.5rem;
+    color: #274546;
+    margin-top: 10px;
+}
+
+/* mobile device - END */
+
+.extrasWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cartQuantity{
+    width: 27px;
+    height: 27px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff0000;
+    position: absolute;
+    top: -2px;
+    left: 17px;
+}
+ 
+.extrasWrapper a{
+    font-size: 1.4rem;
+    color: #274546;
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+.extrasWrapper i{
+    margin-top: 8px;
+}
+
+.signInLink{
+    font-size: 1rem !important;
+    font-weight: 700;
+    border-bottom: 2px solid #274546;
+    padding: 0 4px;
+}
+
+.turnRatingsLink{
+    width: 70px;
+    text-decoration: none;
+    color: #274546;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1rem !important;
+    border: 2px solid #274546;
+    border-radius: 8px;
+    padding: 3px 2px !important;
+    transition: 0.3s;
+}
+
+.turnRatingsLink:hover{
+    background-color: #274546;
+    color: #E2DCC8;
+}
+
+.turnRatingsLink:active{
+    transform: scale(0.98);
+}
+
+.menu{
+    display: none;
+}
+
+.navbarMenu{
+    list-style: none;
+    display: flex;
+}
+
+.navbarMenu a{
+    text-decoration: none;
+    color: #100F0F;
+    font-size: 0.9rem;
+}
+
+.navbarMenu li{
+    position: relative;
+}
+
+.link{
+    margin-left: 10px;
+    font-weight: 700;
+    position: relative;
+    padding: 6px 5px;
+    border-radius: 7px;
+    z-index: 99;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.link:hover{
+    color: #F1F1F1;
+    background-color: #274546;
+}
+
+.link span{
+    margin-left: 5px;
+}
+
+.subMenu{
+    list-style: none;
+    width: 190px;
+    background-color: #F1F1F1;
+    padding: 10px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    border-radius: 0 0 5px 5px;
+    display: none;
+    transition: 0.4s;
+}
+
+.subMenu li{
+    width: 100%;
+    margin: 10px 0;
+    padding-bottom: 9px;
+}
+
+.subMenu li:not(.subMenu li:last-child){
+    border-bottom: 1px solid #27454626;
+}
+
+.subMenu span{
+    width: calc(100% - 10px);
+    display: inline-block;
+}
+
+.sub:hover .subMenu{
+    display: block;
+}
+
+.navbarMenuLeft{
+    display: flex;
+    align-items: center;
+}
+
+
+
+@media (min-width: 480px){
+    .navbarContainer{
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 768px){
+    .burgerMenuIcon{    
+        display: none;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .turnRatingsBtn{
+        padding: 5px 10px;
+    }
+
+    .extrasWrapper div{
+        margin-right: 30px;
+    }
+
+    .navbarMenuLeft button{
+        display: block;
+    }
+}
+
+@media (min-width: 900px){
+    .navbarContainer{
+        padding: 0 40px;
+    }
+
+    .link{
+        margin-left: 17px;
+    }
+
+    .navbarMenuLeft button{
+        width: 100px;
+    }
+
+    .extrasWrapper div{
+        margin-right: 40px;
+    }
+}
+
+@media (min-width: 1024px){
+    .links{
+        margin-left: 26px;
+    }
+}
+
+@media (min-width: 1536px){
+    .navbarContainer{
+        width: 1536px;
+    }
+}
+

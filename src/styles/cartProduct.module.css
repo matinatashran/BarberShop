@@ -1,0 +1,128 @@
+.cartProduct{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: auto;
+    border-radius: 8px;
+    position: relative;
+}
+
+.cartProduct:nth-child(odd){
+    background-color: #f1f1f1;
+}
+
+.name{
+    color: #3b5781;
+}
+
+.quantity, .price{
+    color: #274546;
+    position: absolute;
+}
+
+.quantity{
+    right: 35%;
+}
+
+.price{
+    right: 60%;
+}
+
+/* this element show on screen by width less than 376px */
+.priceCopy{
+    display: none;
+    width: 100px;
+    position: absolute;
+    bottom: -18px;        
+    right: -36px;
+    color: #2745468f;
+}
+
+.cartBtnsBox{
+    width: 70px;
+    height: 30px;
+    border: 1px solid #274546;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cartBtnsBox button{
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #274546;
+    cursor: pointer;
+    margin: 3px;
+}
+
+.cartBtnsBox button:nth-child(1){
+    border-left: 1px solid;
+}
+
+.cartBtnsBox button:nth-child(2){
+    border-right: 1px solid;
+}
+
+
+@media (max-width: 1024px) {
+    .quantity{
+        right: 34%;
+    }
+    
+    .price{
+        right: 52%;
+    }
+}
+
+@media (max-width: 768px) {
+    .name, 
+    .quantity, 
+    .price{
+        font-size: 0.9rem;
+    }   
+}
+
+@media (max-width: 576px) {
+    .cartProduct{
+        padding: 10px 7px;
+    }
+
+    .cartBtnsBox button{
+        font-size: 0.9rem;
+    }
+
+    .name{
+        width: 100px;
+    }
+
+    .price, .quantity{
+        position: relative;
+        right: 10px;
+    }
+
+    .price{
+        width: 120px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 376px) {
+    .price{
+        display: none;
+    }
+
+    .quantity{
+        right: -5px;
+    }
+
+    .priceCopy{
+        display: block;
+    }
+}

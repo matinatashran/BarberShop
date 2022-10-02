@@ -1,0 +1,225 @@
+.footerContainer{
+    width: 100%;
+    min-height: 450px;
+    margin-top: 20vh;
+    padding: 50px;
+    background-color: #274546;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    color: #F1F1F1;
+    position: relative;
+}
+
+.footerContainer section{
+    padding-left: 50px;
+}
+
+.footerContainer h1{
+    color: #E2DCC8;
+    font-weight: 800;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.aboutUs p{
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+.links{
+    list-style: none;
+}
+
+.links li{
+    position: relative;
+}
+
+.footerLink, 
+.subMenuLink{
+    text-decoration: none;
+    color: #F1F1F1;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    margin: 5px 0;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.footerLink:hover{
+    color: #E2DCC8;
+}
+
+/* sub menu */
+.footerSubMenu{
+    list-style: none; 
+    padding: 10px;
+    background-color: #efeee5;
+    width: 180px;
+    position: absolute;
+    top: 28px;
+    right: 90px;
+    border-radius: 5px;
+    z-index: 99;
+    display: none;
+}
+
+.subMenuLink{
+    color: #274546;
+    border-radius: 5px;
+}
+
+.subMenuLink:hover{
+    background-color: #274546;
+    color: #E2DCC8;
+}
+
+.sub{
+    width: 110px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sub i{
+    margin-right: 5px;
+    transition: 0.3s;
+}
+
+.sub:hover{
+    color: #E2DCC8;
+}
+
+.sub:hover .footerSubMenu{
+    display: block;
+}
+
+.address{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.address p{
+    margin: 15px 20px 0 0;
+    font-size: 0.9rem;
+}
+
+.tel{
+    margin-bottom: 40px;
+}
+
+.tel span{
+    font-weight: 700;
+    margin: 0 20px 0 0;
+    font-size: 0.9rem;
+}
+
+.logoText{
+    width: 270px;
+    position: absolute;
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 800;
+    font-family: Righteous;
+    color: #E2DCC8;
+    transform: rotate(-90deg);
+    left: -80px;
+    top: calc(50% + 12px);
+}
+
+.socialMedia{
+    width: 200px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 25px;
+    left: calc(50% - 100px);
+}
+
+.socialMediaLinks{
+    width: 200px;
+    height: 30px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.socialLink{
+    font-size: 1.5rem;
+    color: #f1f1f1;
+    margin: 0 13px;
+}
+
+.socialLink i{
+    transition: 0.3s;
+}
+
+.socialLink:hover.socialLink i{
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .footerContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footerContainer section:not(.logoText){
+        width: 85%;
+        text-align: center;
+        margin: 0 auto;
+        padding-left: 0;
+    }
+
+    .footerContainer h1{
+        font-size: 1rem;
+    }
+
+    .aboutUs p{
+        font-size: 0.85rem;
+    }
+
+    .links{
+        font-size: 0.85rem;
+    }
+
+    .sub i{
+        margin-right: 10px;
+    }
+
+    .relationship h3{
+        font-size: 1rem;
+    }
+
+    .address p{
+        margin: 15px 0 0 0;
+        font-size: 0.85rem;
+    }
+    
+    .tel span{
+        margin: 0;
+        font-size: 0.85rem;
+    }
+
+    .logoText{
+        left: -100px;
+        font-size: 1.5rem;
+    }
+
+    .socialMedia{
+        width: 200px !important;
+        bottom: 30px;
+        font-size: 1.1rem;
+        left: calc(50% - 100px);
+    }
+}
+
+@media (max-width: 480px) {
+    .footerContainer section:not(.logoText){
+        width: 100%;
+    }
+
+    .footerSubMenu{
+        width: 121px;
+    }
+}

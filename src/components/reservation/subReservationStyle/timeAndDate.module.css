@@ -1,0 +1,188 @@
+.timeAndDateContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeAndDateContainer h3{
+    font-weight: 800;
+    font-size: 1rem;
+    color: #3b5781;
+    background-color: #ecf0f3;
+    width: 90px;
+    text-align: center;
+    border-radius: 0 0 0 15px;
+
+}
+
+.collocationDate{
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    min-height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #bdbdbd;
+}
+
+.showDate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.monthDisplay{
+    display: flex;
+    justify-content: center;
+}
+
+.months{
+    width: 100px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.arrowLeft, 
+.arrowRight{
+    font-size: 1.1rem;
+    color: #3b5781;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 99;
+}
+
+.monthRole{
+    display: flex;
+    width: 1200%;
+    transition: 0.5s;
+    position: absolute;
+    top: 3px;
+}
+
+.monthName{
+    color: #0F3D3E;
+    font-size: 1rem;
+    margin: 0 5px;
+    width: 50%;
+}
+
+.showNumberOfDate{
+    width: 70%;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dayNumber{
+    width: 30px;
+    height: 30px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-weight: 700;
+    color: #3b5781;
+    transition: 0.2s;
+}
+
+/* time section */
+.showTime{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px auto 0 auto;
+    padding-bottom: 15px;
+}
+
+.timeInput{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    opacity: 0; 
+    z-index: -1; 
+}
+
+.timeText{
+    width: 80px;
+    height: 40px;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    font-weight: 700;
+    color: #3b5781;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    margin: 5px;
+}
+
+.timeInput:checked ~ label .timeText{
+    background-color: #3b5781;
+    color: #f1f1f1;
+    border-radius: 30px;
+}
+
+.timeInput:checked ~ label .checkIcon{
+    opacity: 1;
+    z-index: 99;
+}
+
+.checkIcon{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #3b5781;
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 27px;
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 10px);
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .timeAndDateContainer h3{
+        font-weight: 700;
+        font-size: 0.85rem;
+        width: 75px;
+    }    
+
+    .showNumberOfDate, 
+    .showTime{
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {  
+    .timeAndDateContainer{
+        margin-top: 11em;
+    }
+
+    .dayNumber{
+        width: 27px;
+        height: 27px;
+        line-height: 33px;
+        font-size: 0.9rem;
+    }  
+
+    .timeText{
+        width: 60px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .checkIcon{
+        font-size: 0.7rem;
+    }
+}

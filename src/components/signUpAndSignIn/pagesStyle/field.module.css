@@ -1,0 +1,65 @@
+.field{
+    position: relative;
+    min-height: 80px;
+    margin: 4px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.field label{
+    font-weight: 700;
+    position: absolute;
+    color: #3b5781;
+    background-color: #fff;
+    padding: 0 10px;
+    top: 8px;
+    right: 20px;
+    font-size: 0.9rem;
+}
+
+.textAreaLabel{
+    top: 0 !important;
+}
+
+.fieldInput{
+    width: 95%;
+    padding: 8px 20px 4px 20px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 5px #d2d1d1;
+    font-family: YekanBakh;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #3f3f3f;
+    outline: none;
+}
+
+.field textarea{
+    margin: 15px 0;
+}
+
+.field span{
+    font-size: 0.85rem;
+    color: #f00;
+    font-weight: 700;
+    position: absolute;
+    top: 65px;
+    left: 30px;
+}
+
+.textAreaSpan{
+    top: 106px !important;
+}
+
+@media (max-width: 480px) {
+    .field label{
+        top: 9px;
+        font-size: 0.8rem;
+    }    
+
+    .fieldInput{
+        width: 100%;
+        font-size: 0.85rem;
+    }
+}

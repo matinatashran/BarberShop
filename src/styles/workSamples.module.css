@@ -1,0 +1,174 @@
+.workSamplesContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px auto;
+}
+
+.workSampleTitle{
+    width: 60%;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #0F3D3E;
+    position: relative;
+}
+
+.workSampleTitle span{
+    width: 150px;
+    position: absolute;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 900;
+    top: -20px;
+    right: calc(50% - 75px);
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #0F3D3E;
+}
+
+.sliderBox{
+    width: 800px;
+    height: 500px;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    border-bottom: 2px solid #0F3D3E;
+}
+
+.sliderImages{
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    transition: 0.8s;
+    z-index: 100;
+}
+
+.sliderImages > div{
+    width: 800px;
+    height: 100%;
+    background-size: cover; 
+    background-position: center;
+}
+
+.btnsBox{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 23px;
+    left: 0;
+}
+
+.btn{
+    width: 24px;
+    height: 24px;
+    border: 2px solid #0F3D3E;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: 0.4s;
+}
+
+.btn::after{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #0F3D3E;
+    position: absolute;
+    border-radius: 50%;
+    top: calc(50% - 4px);
+    left: calc(50% - 4px);
+    transition: 0.4s;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.btnCaption{
+    width: 100px;
+    position: absolute;
+    text-align: center;
+    top: 35px;
+    right: calc(50% - 50px);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: auto;
+}
+
+@media (max-width: 900px) {
+    .sliderBox{
+        width: 600px;
+        height: 400px;
+    }
+    
+    .sliderImages{
+        height: 300px;
+    }
+    
+    .sliderImages > div{
+        width: 600px;
+    }
+
+    .btnCaption{
+        width: 90px;
+        font-size: 0.9rem;
+        right: calc(50% - 45px);
+    }
+}
+
+@media (max-width: 768px) {
+    .workSampleTitle{
+        width: 90%;
+    }
+
+    .sliderBox{
+        width: 400px;
+        height: 300px;
+    }
+    
+    .sliderImages{
+        height: 200px;
+    }
+    
+    .sliderImages > div{
+        width: 400px;
+    }
+
+    .btnCaption{
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .workSampleTitle span{
+        width: 120px;
+        font-size: 1rem;
+        top: -17px;
+        right: calc(50% - 60px);
+    }
+
+    .sliderBox{
+        width: 98%;
+        height: 300px;
+    }
+
+    .sliderImages{
+        width: 500%;
+        height: 210px;
+    }
+
+    .sliderImages > div{
+        width: 100%;
+    }
+
+    .btnCaption{
+        width: 80px;
+        font-size: 0.75rem;
+        right: calc(50% - 39px);
+    }
+}
+

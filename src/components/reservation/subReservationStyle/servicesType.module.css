@@ -1,0 +1,136 @@
+.servicesTypeContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.service{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    height: 50px;
+    color: #0F3D3E;
+    font-weight: 700;
+    margin: 0 20px;
+    padding: 0 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.service:last-child{
+    margin-bottom: 18px;
+}
+
+.service:nth-child(even){
+    background-color: #f1f1f1;
+}
+
+.serviceIcon{
+    line-height: 50%;
+}
+
+.serviceTime{
+    text-align: center;
+}
+
+/* it's for screen size less than 480px */
+.serviceTimeCopy{
+    display: block;
+    font-size: 0.8rem;
+    color: #9c9c9c;
+    display: none;
+}
+
+.serviceInput{
+    margin-top: 10px;
+    text-align: left;
+}
+
+.serviceInput input{
+    cursor: pointer;
+    z-index: 99;
+    opacity: 0; 
+}
+
+.checkmark{
+    width: 30px;
+    height: 25px;
+    border-radius: 20px;
+    position: absolute;
+    top: calc(50% - 12.5px);
+    left: 16px;
+    z-index: 1;
+    border: 2px solid #3b5781;
+    cursor: pointer;
+}
+
+.checkmark::after{
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 99;
+    background-color: #3b5781;
+    top: calc(50% - 4px);
+    left: calc(50% - 4px);
+}
+
+.serviceInput input:checked ~ .checkmark{
+    background-color: #3b5781;
+}
+
+.serviceInput input:checked ~ .checkmark::after{
+    background-color: #fff;
+}
+
+
+@media (max-width: 576px) {
+    .serviceTime{
+        text-align: left;
+    }
+
+    .checkmark{
+        width: 25px;
+        height: 20px;
+        top: calc(50% - 14px);
+        left: -5px;
+    }
+    
+    .checkmark::after{
+        width: 6px;
+        height: 6px;
+        top: calc(50% - 3px);
+        left: calc(50% - 3px);
+    }
+}
+
+@media (max-width: 480px) {
+    .servicesTypeContainer{
+        margin-top: 12em;
+    }
+
+    .serviceTime{
+        display: none;
+    }
+
+    .serviceTimeCopy{
+        display: block;
+    }
+
+    .serviceInput{
+        position: absolute;
+        left: 20px;
+    }
+
+    .serviceName{
+        position: absolute;
+        right: 40%;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .serviceName{
+        right: 30%;
+    }
+}
