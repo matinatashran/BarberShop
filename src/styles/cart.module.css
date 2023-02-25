@@ -73,6 +73,7 @@
     background-color: #ececec !important;
     color: #8d8d8d !important;
     visibility: none;
+    cursor: auto !important;
 }
 
 .fakeBtn:hover{

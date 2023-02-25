@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 // styles
@@ -21,6 +21,8 @@ const PageSpan = styled.span`
 `;
 
 const SignUp = () => {
+    const navigate = useNavigate();
+
     // this state is for show to pages : (مشخصات فردی), (تایین کلمه عبور)
     const [witchPage, setWitchPage] = useState(2);
 
@@ -81,8 +83,9 @@ const SignUp = () => {
             });
             
         } else {
-            notification("به آذرده کلاب خوش آمدید", "SUCCESS");
+            notification("به مجموعه خودتان خوش آمدید", "SUCCESS");
             window.localStorage.removeItem("BUserData");
+            navigate("/home", { replace: true });
         }
     };
 
@@ -150,7 +153,7 @@ const SignUp = () => {
                 </section>
                 <section className={style.left}>
                     <section className={style.innerLeft}>
-                        <h2>AZORDEH CLUB</h2>
+                        <h2>BARBERSHOP</h2>
                         <span>مفتخریم که شما مجموعه ما را برگزیدید.</span>
                         <Link to="/sign-in">ورود</Link>
                     </section>

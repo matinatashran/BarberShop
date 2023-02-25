@@ -1,12 +1,6 @@
-import { useEffect, useState, useContext } from "react";
+import { useState } from "react";
 
 import style from "../subReservationStyle/timeAndDate.module.css";
-
-// helper
-import { isFill } from "../../../helper/functions";
-
-// context
-// import { CollocationData } from "../../../context/CustomerReservedDataProvider";
 
 // components
 import TimeSection from "./TimeSection";

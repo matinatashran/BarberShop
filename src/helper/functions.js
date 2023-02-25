@@ -156,15 +156,15 @@ const validation = (data, type) => {
             errors.confirmPassword = "تکرار کلمه عبور صحیح نمی باشد";
         else delete errors.confirmPassword;
     } else {
-        // const { email, password } = data;
-        // if (!email.value.trim()) errors.email = "ایمیل الزامی است";
-        // else if (!/\S+@\S+\.\S+/.test(email.value))
-        //     errors.email = "فرمت ایمیل شما صحیح نمی باشد";
-        // else delete errors.email;
-        // if (!password.value.trim()) errors.password = "کلمه عبور الزامی است";
-        // else if (password.value.length < 8 || password.value.length > 15)
-        //     errors.password = "کلمه عبور باید بین 8 تا 15 حرف باشد";
-        // else delete errors.password;
+        const { email, password } = data;
+        if (!email.value.trim()) errors.email = "ایمیل الزامی است";
+        else if (!/\S+@\S+\.\S+/.test(email.value))
+            errors.email = "فرمت ایمیل شما صحیح نمی باشد";
+        else delete errors.email;
+        if (!password.value.trim()) errors.password = "کلمه عبور الزامی است";
+        else if (password.value.length < 8 || password.value.length > 15)
+            errors.password = "کلمه عبور باید بین 8 تا 15 حرف باشد";
+        else delete errors.password;
     }
 
     return errors;

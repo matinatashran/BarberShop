@@ -1,9 +1,16 @@
+import { useNavigate } from "react-router-dom";
+
 import style from "../subReservationStyle/confirmation.module.css";
+
+// notification
+import { notification } from "../../notification/Notify";
 
 // helper
 import { deleteFromLocalStorage } from "../../../helper/functions";
 
 const Confirmation = ({ customerReserved }) => {
+    const navigate = useNavigate();
+
     const { service, date, time } = customerReserved;
 
     const { ReYear, ReMonth, ReDayNumber, ReDayName } = date;
@@ -14,8 +21,8 @@ const Confirmation = ({ customerReserved }) => {
             "reservedDate",
             "reservedTime",
         ]);
-        
-        window.location.reload();
+        notification("نوبت دهی شما با موفقیت انجام شد.", "SUCCESS");
+        navigate("/home");
     };
 
     return (

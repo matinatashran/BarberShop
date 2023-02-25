@@ -7,10 +7,15 @@ import style from "../../styles/productsPage.module.css";
 // shared
 import ProductCard from "../shared/ProductCard";
 
+// images
+import brush from "../../images/brush.png";
+import color from "../../images/color.png";
+import scissor from "../../images/scissor.png";
+
 const data = [
-    { id: 4, title: "برس مو", price: 70000 },
-    { id: 5, title: "رنگ مو", price: 450000 },
-    { id: 6, title: "ماساژر مو", price: 55000 },
+    { id: 4, title: "برس مو", price: 70000, image: brush },
+    { id: 5, title: "رنگ مو", price: 450000, image: color },
+    { id: 6, title: "قیچی", price: 1000000, image: scissor },
 ];
 
 const ProductsPage = () => {
@@ -27,6 +32,7 @@ const ProductsPage = () => {
                         id={product.id}
                         title={product.title}
                         price={product.price}
+                        image={product.image}
                         productData={data[index]}
                         state={state}
                         cartDispatch={cartDispatch}

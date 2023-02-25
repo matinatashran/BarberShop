@@ -1,12 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
 
 // styles
 import style from "../../styles/productCard.module.css";
-
-// images
-import barber from "../../images/barber.png";
 
 // helper
 import { qauantityCount } from "../../helper/functions";
@@ -19,14 +15,14 @@ import {
     decreaseItem,
 } from "../../redux/cart/cartAction";
 
-const ProductCard = ({ id, title, price, productData, type, state, cartDispatch }) => {
+const ProductCard = ({ id, title, price, image, productData, type, state, cartDispatch }) => {
 
     const qauantity = qauantityCount(state, id);
 
     return (
         <section className={style.productCard}>
             <div className={style.imageBox}>
-                <img src={barber} />
+                <img src={image} />
             </div>
             <div className={style.productTitle}>
                 <span>{title}</span>

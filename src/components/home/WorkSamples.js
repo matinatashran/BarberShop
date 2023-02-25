@@ -5,17 +5,17 @@ import styled from "styled-components";
 import style from "../../styles/workSamples.module.css";
 
 // images
-import barber from "../../images/barber.png";
-import one from "../../images/1.png";
-import two from "../../images/2.png";
-import three from "../../images/3.png";
-import four from "../../images/4.png";
+import haircut from "../../images/haircut.png";
+import hairColor from "../../images/hairColor.png";
+import makeup from "../../images/makeup.png";
+import hairCurler from "../../images/hairCurler.png";
+import hairStyle from "../../images/hairStyle.png";
 
 const SlideRole = styled.section`
-    left: ${(props) => props.number ? props.number : "-200%"} !important;
+    left: ${(props) => (props.number ? props.number : "-200%")} !important;
 
     @media (max-width: 480px) {
-        left: ${(props) => props.number ? props.number : "-400%"} !important;
+        left: ${(props) => (props.number ? props.number : "-400%")} !important;
     }
 `;
 
@@ -27,18 +27,10 @@ const SliderBtns = styled.section`
             background-color: #fff;
         }
 
-        span {
-            /* color: #FF834D;  */
-        }
-
         @media (max-width: 480px) {
             transform: scale(1.1);
         }
     }
-
-    /* @media (max-width: 480px) {
-        display: none;
-    } */
 `;
 
 const moveSlide = (slide_id) => {
@@ -66,24 +58,24 @@ const WorkSamples = () => {
             <section className={style.sliderBox}>
                 <SlideRole className={style.sliderImages} number={number}>
                     <div
-                        className={style.image1}
-                        style={{ backgroundImage: `url(${barber})` }}
-                    ></div>
-                    <div
-                        className={style.image2}
-                        style={{ backgroundImage: `url(${one})` }}
-                    ></div>
-                    <div
-                        className={style.image3}
-                        style={{ backgroundImage: `url(${two})` }}
+                        className={style.image5}
+                        style={{ backgroundImage: `url(${hairStyle})` }}
                     ></div>
                     <div
                         className={style.image4}
-                        style={{ backgroundImage: `url(${three})` }}
+                        style={{ backgroundImage: `url(${hairCurler})` }}
                     ></div>
                     <div
-                        className={style.image5}
-                        style={{ backgroundImage: `url(${four})` }}
+                        className={style.image3}
+                        style={{ backgroundImage: `url(${haircut})` }}
+                    ></div>
+                    <div
+                        className={style.image2}
+                        style={{ backgroundImage: `url(${hairColor})` }}
+                    ></div>
+                    <div
+                        className={style.image1}
+                        style={{ backgroundImage: `url(${makeup})` }}
                     ></div>
                 </SlideRole>
                 <SliderBtns className={style.btnsBox} slideId={slideId}>
@@ -92,9 +84,7 @@ const WorkSamples = () => {
                         id="slide5"
                         onClick={clickHandler}
                     >
-                        <span className={style.btnCaption}>
-                            استایل دهی 
-                        </span>
+                        <span className={style.btnCaption}>استایل دهی</span>
                     </div>
                     <div
                         className={style.btn}
@@ -108,9 +98,7 @@ const WorkSamples = () => {
                         id="slide3"
                         onClick={clickHandler}
                     >
-                        <span className={style.btnCaption}>
-                            هیرکات
-                        </span>
+                        <span className={style.btnCaption}>هیرکات</span>
                     </div>
                     <div
                         className={style.btn}

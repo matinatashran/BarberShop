@@ -1,24 +1,23 @@
 .notifyContainer{
-    width: 900px;
+    width: 400px;
     height: 60px;
+    margin: 10px 0;
     border-radius: 10px;
     background-color: #fff;
-    z-index: 999;
+    box-shadow: 0 0 4px #c4c4c4;
+    font-family: Righteous;
     position: fixed;
     top: 0;
-    left: calc(50% - 450px);
-    font-family: Righteous;
-    box-shadow: 0 0 10px #000;
-    font-size: 1.1rem;
+    left: calc(50% - 200px);
     overflow: hidden;
-    margin: 10px 0;
+    z-index: 999;
 }
 
 .cross{
     position: absolute;
     top: 11px;
     right: 17px;
-    color: #ff4400;
+    color: #dadada;
     font-size: 1.2rem;
     cursor: pointer;
     padding: 2px;
@@ -29,7 +28,7 @@
     color: #1c4b8b;
     font-family: YekanBakh;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .btn{
@@ -38,37 +37,9 @@
     left: 100px;
 }
 
-@media (max-width: 1200px) {
-    .notifyContainer{
-        width: 700px;
-        left: calc(50% - 350px);
-    }
-}
-
-@media (max-width: 768px) {
-    .notifyContainer{
-        width: 450px;
-        left: calc(50% - 225px);
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .notifyContainer{
-        width: 95%;
-        left: 10px;
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 320px) {
-    .cross{
-        top: 6px;
-        right: 10px;
-        font-size: 1rem;
-    }
-
-    .notifyText{
-        margin: 18px 30px;
-    }
+.icon{
+    position: absolute;
+    top: calc(50% - 15px);
+    font-size: 1.6rem;
+    left: 25px;
 }

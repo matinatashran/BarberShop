@@ -36,7 +36,7 @@ const TimeSection = () => {
             <h3>ساعت رزرو</h3>
             <section className={style.showTime}>
                 {timesWork.map((time, index) => (
-                    <div className={style.timeBox}>
+                    <div key={index} className={style.timeBox}>
                         <input
                             type="radio"
                             id={index}

@@ -43,6 +43,5 @@ const data = [
     "ماساژ",
 ];
 
-// component: Field in SignUp and SignIn
 
 export { Months, timesWork, data };

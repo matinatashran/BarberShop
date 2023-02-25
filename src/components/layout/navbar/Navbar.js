@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -150,9 +150,11 @@ const Navbar = () => {
 
                     <Link to="/cart">
                         <i className="fas fa-shopping-bag"></i>
-                        <span className={style.cartQuantity}>
-                            {itemsCounter}
-                        </span>
+                        {itemsCounter > 0 && (
+                            <span className={style.cartQuantity}> 
+                                {itemsCounter}
+                            </span> 
+                        )}
                     </Link>
                 </section>
             </section>

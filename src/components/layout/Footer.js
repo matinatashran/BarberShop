@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className={style.footerContainer}>
             <section className={style.aboutUs}>
-                <h1>Azordeh Club</h1>
+                <h1>Barbershop</h1>
                 <p>
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
                     با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه
@@ -130,8 +130,7 @@ const Footer = () => {
                 <div className={style.address}>
                     <h3>آدرس : </h3>
                     <p>
-                        مازندران - ساری - خیابان فرهنگ - سه راهی فرهنگ و قارن -
-                        خیابان نبوت
+                        مازندران - ساری - خیابان فرهنگ
                     </p>
                 </div>
                 <div className={style.tel}>
@@ -158,7 +157,7 @@ const Footer = () => {
                     </li>
                 </ul>
             </section>
-            <section className={style.logoText}>AZORDEH CLUB</section>
+            <section className={style.logoText}>BARBERSHOP</section>
         </footer>
     );
 };

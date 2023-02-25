@@ -32,9 +32,9 @@ const SignIn = () => {
         password: false,
     });
 
-    // useEffect(() => {
-    //     setFieldErrors(validation(userData, "SIGN-IN"));
-    // }, [userData]);
+    useEffect(() => {
+        setFieldErrors(validation(userData, "SIGN-IN"));
+    }, [userData]);
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -43,6 +43,7 @@ const SignIn = () => {
                 email: true,
                 password: true,
             });
+            notification("لطفا اطلاعات را به درستی وارد نمائید!", "ERROR")
         }
     };
 
@@ -76,7 +77,7 @@ const SignIn = () => {
                 </section>
                 <section className={style.left}>
                     <section className={style.innerLeft}>
-                        <h2>AZORDEH CLUB</h2>
+                        <h2>BARBERSHOP</h2>
                         <p>
                             خوش آمدید !
                             <br />
